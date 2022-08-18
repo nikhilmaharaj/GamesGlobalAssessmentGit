@@ -54,8 +54,7 @@ namespace GamesGlobalAssessment.Controllers
                     ModelState.AddModelError("", error.Description);
                 }
 
-                ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
-
+                ModelState.AddModelError(string.Empty, "Invalid Registration Attempt");
             }
             return View(model);
         }

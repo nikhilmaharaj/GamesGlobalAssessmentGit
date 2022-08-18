@@ -54,9 +54,10 @@
                 <button type="submit" class="btn btn-primary">Register</button>
             </div>
         </div>
-        <div class="row md-Padding-Top-170 align-center">
-        </div>
         <div class="row md-Padding-Top-80 align-center">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        </div>
+        <div class="row md-Padding-Top-170 align-center">
         </div>
     </form>
 </div>
