@@ -1,0 +1,9 @@
+C:\Users\user-pc\Desktop\GamesGlobalAssessmentGit\obj\Debug\netcoreapp3.1\GamesGlobalAssessment.csproj.AssemblyReference.cache
+C:\Users\user-pc\Desktop\GamesGlobalAssessmentGit\obj\Debug\netcoreapp3.1\GamesGlobalAssessment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user-pc\Desktop\GamesGlobalAssessmentGit\obj\Debug\netcoreapp3.1\GamesGlobalAssessment.AssemblyInfoInputs.cache
+C:\Users\user-pc\Desktop\GamesGlobalAssessmentGit\obj\Debug\netcoreapp3.1\GamesGlobalAssessment.AssemblyInfo.cs
+C:\Users\user-pc\Desktop\GamesGlobalAssessmentGit\obj\Debug\netcoreapp3.1\GamesGlobalAssessment.csproj.CoreCompileInputs.cache
+C:\Users\user-pc\Desktop\GamesGlobalAssessmentGit\obj\Debug\netcoreapp3.1\GamesGlobalAssessment.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user-pc\Desktop\GamesGlobalAssessmentGit\obj\Debug\netcoreapp3.1\GamesGlobalAssessment.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user-pc\Desktop\GamesGlobalAssessmentGit\obj\Debug\netcoreapp3.1\GamesGlobalAssessment.RazorAssemblyInfo.cache
+C:\Users\user-pc\Desktop\GamesGlobalAssessmentGit\obj\Debug\netcoreapp3.1\GamesGlobalAssessment.RazorAssemblyInfo.cs

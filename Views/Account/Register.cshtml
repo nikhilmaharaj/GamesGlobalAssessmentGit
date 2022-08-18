@@ -1,0 +1,64 @@
+﻿@model GamesGlobalAssessment.Models.RegisterViewModel
+
+<div class="well white">
+    <form id="account" method="post" style="background: url('@Url.Content("~/css/images/tv2.jpg")');">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="row md-Padding-Top-50">
+            <div class="col-md-12">
+                <h2>Register</h2>
+            </div>
+        </div>
+        <div class="row md-Padding-Top-50">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1">
+                <label class="control-label md-Padding-Top-5"><b>Email</b></label>
+            </div>
+            <div class="col-md-2">
+                <input asp-for="Email" class="form-control" required="required" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row md-Padding-Top-50">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1">
+                <label class="control-label md-Padding-Top-5"><b>Password</b></label>
+            </div>
+            <div class="col-md-2">
+                <input asp-for="Password" class="form-control" required="required" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row md-Padding-Top-50">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1">
+                <label class="control-label md-Padding-Top-5"><b>Confirm Password</b></label>
+            </div>
+            <div class="col-md-2">
+                <input asp-for="ConfirmPassword" class="form-control" required="required" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row md-Padding-Top-50">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+        </div>
+        <div class="row md-Padding-Top-340">
+            <div class="col-md-4">
+                <label class="control-label md-Padding-Top-5"><b>Please make sure that the password had a non alpha numeric and uppercase character</b></label>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
+
