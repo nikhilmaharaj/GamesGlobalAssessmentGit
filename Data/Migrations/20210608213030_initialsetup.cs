@@ -18,7 +18,7 @@ namespace GamesGlobalAssessment.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TVShow", x => x.Id);
+                    table.PrimaryKey("PK_TVShow", x => x.TVShowID);
                 });
         }
 

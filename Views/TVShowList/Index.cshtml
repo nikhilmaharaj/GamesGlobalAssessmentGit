@@ -1,0 +1,76 @@
+﻿@model IEnumerable<GamesGlobalAssessment.Models.ViewTVShows>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<form style="background: url('@Url.Content("~/css/images/tv4.jpg")');">
+    <div class="row md-Padding-Top-100">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1 class="display-4">TV Show List</h1>
+        </div>
+    </div>
+
+    @using (Html.BeginForm("Index", "TVShowList", FormMethod.Post))
+    {
+        <div class="well white">
+            <div class="row md-Padding-Bottom-10">
+                <div class="col-md-4">
+                    @Html.TextBox("search", null, new { @class = "form-control", @placeholder = "Search by Title, Year etc..." })
+                </div>
+                <div class="col-md-2">
+                    <input type="submit" value="Search" class="btn btn-block btn-info" />
+                </div>
+                <div class="col-md-2 col-xs-2 align-right">
+                    <a asp-action="Create" data-toggle="tooltip" title="Add a Pet">
+                        <i class="fa fa-2x fa-plus"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+
+    <table class="table table-bordered table-striped table-responsive">
+        <thead>
+            <tr>
+                <th></th>
+                <th>
+                    @Html.DisplayName("Title")
+                </th>
+                <th>
+                    @Html.DisplayName("Year")
+                </th>
+                <th>
+                    @Html.DisplayName("Created By")
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.TVShowID" data-toggle="tooltip" title="Details">
+                        <i class="fa fa-2x fa-edit"></i>
+                    </a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedBy)
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.TVShowID" data-toggle="tooltip" title="Delete">
+                        <i class="fa fa-2x fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</form>
