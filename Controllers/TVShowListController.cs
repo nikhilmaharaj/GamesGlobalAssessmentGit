@@ -45,7 +45,7 @@ namespace GamesGlobalAssessment.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TVShowID,Title,Year,CreatedBy")] TVShow tvshow)
+        public async Task<IActionResult> Create([Bind("TVShowID,Title,Year,CreatedBy,UserID")] TVShow tvshow)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace GamesGlobalAssessment.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("TVShowID,Title,Year,CreatedBy")] TVShow tvshow)
+        public async Task<IActionResult> Edit(int id, [Bind("TVShowID,Title,Year,CreatedBy,UserID")] TVShow tvshow)
         {
             if (id != tvshow.TVShowID)
             {
