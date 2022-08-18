@@ -15,6 +15,7 @@ namespace GamesGlobalAssessment.Data
         }
         public DbSet<GamesGlobalAssessment.Models.TVShow> TVShow { get; set; }
         public DbSet<GamesGlobalAssessment.Models.Episode> Episode { get; set; }
+        public DbSet<GamesGlobalAssessment.Models.Users> Users { get; set; }
         public DbSet<GamesGlobalAssessment.Models.ViewTVShows> ViewTVShows { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

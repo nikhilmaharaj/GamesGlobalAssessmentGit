@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using GamesGlobalAssessment.Data;
 
 namespace GamesGlobalAssessment.Controllers
 {
@@ -15,12 +17,15 @@ namespace GamesGlobalAssessment.Controllers
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly ApplicationDbContext _context;
 
         public AccountController(UserManager<IdentityUser> userManager,
-                              SignInManager<IdentityUser> signInManager)
+                              SignInManager<IdentityUser> signInManager,
+                              ApplicationDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _context = context;
         }
 
         [HttpGet]
@@ -41,6 +46,14 @@ namespace GamesGlobalAssessment.Controllers
                 };
 
                 var result = await _userManager.CreateAsync(user, model.Password);
+
+                var users = new Users
+                {
+                    Username = model.Email
+                };
+
+                _context.Add(users);
+                await _context.SaveChangesAsync();
 
                 if (result.Succeeded)
                 {
