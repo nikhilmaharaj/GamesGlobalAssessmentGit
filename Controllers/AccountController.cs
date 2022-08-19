@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using GamesGlobalAssessment.Data;
+using Microsoft.AspNetCore.Http;
 
 namespace GamesGlobalAssessment.Controllers
 {
@@ -18,14 +19,17 @@ namespace GamesGlobalAssessment.Controllers
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ApplicationDbContext _context;
+        private IHttpContextAccessor _httpContextAccessor;
 
         public AccountController(UserManager<IdentityUser> userManager,
                               SignInManager<IdentityUser> signInManager,
-                              ApplicationDbContext context)
+                              ApplicationDbContext context,
+                              IHttpContextAccessor httpContextAccessor)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _context = context;
+            _httpContextAccessor = httpContextAccessor;          
         }
 
         [HttpGet]
@@ -52,12 +56,14 @@ namespace GamesGlobalAssessment.Controllers
                     Username = model.Email
                 };
 
-                _context.Add(users);
+                _context.Add(users); //Adds to the users table
                 await _context.SaveChangesAsync();
 
                 if (result.Succeeded)
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false);
+
+                    _httpContextAccessor.HttpContext.Session.SetString("Username", model.Email); //Sets the username into the current session
 
                     return RedirectToAction("index", "Home");
                 }
@@ -90,6 +96,8 @@ namespace GamesGlobalAssessment.Controllers
                 if (identityUser.Id != null)
                 {
                     await _signInManager.SignInAsync(identityUser, isPersistent: false);
+                    _httpContextAccessor.HttpContext.Session.SetString("Username", user.Email); //Sets the username into the current session
+
                     return RedirectToAction("Index", "Home");
                 }
 

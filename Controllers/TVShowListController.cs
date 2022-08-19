@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GamesGlobalAssessment.Data;
 using GamesGlobalAssessment.Models;
+using Microsoft.AspNetCore.Http;
+using System.Web;
 
 namespace GamesGlobalAssessment.Controllers
 {
@@ -15,10 +17,12 @@ namespace GamesGlobalAssessment.Controllers
     public class TVShowListController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private IHttpContextAccessor _httpContextAccessor;
 
-        public TVShowListController(ApplicationDbContext context)
+        public TVShowListController(ApplicationDbContext context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         // GET: TVShowList
@@ -49,7 +53,18 @@ namespace GamesGlobalAssessment.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(tvshow);
+                string username = _httpContextAccessor.HttpContext.Session.GetString("Username"); //Gets the username from the session
+                var userID = from x in _context.Users.ToList() //Gets the userID by the username
+                             where x.Username == username
+                             select x.UserID;
+
+                TVShow entity = new TVShow();
+                entity.Title = tvshow.Title;
+                entity.Year = tvshow.Year;
+                entity.CreatedBy = tvshow.CreatedBy;
+                entity.UserID = Convert.ToInt32(userID.First());
+
+                _context.Add(entity);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
