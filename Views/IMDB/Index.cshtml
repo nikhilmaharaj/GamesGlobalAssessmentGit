@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "IMDB TV Show List";
+}
+
+<form style="background: url('@Url.Content("~/css/images/tv.jpg")');">
+    <div class="row md-Padding-Top-50">
+    </div>
+    <div class="row md-Padding-Top-50">
+        <div class="col-md-12">
+            <h1 class="control-label md-Padding-Top-5 align-center">IMDB TV Show List</h1>
+        </div>
+    </div>
+    <div class="well white md-Padding-Top-50">
+        <div class="row md-Padding-Bottom-15 md-Padding-left-15">
+            <div class="col-md-2 md-Padding-left-15">
+                @Html.TextBox("search", null, new { @class = "form-control", @placeholder = "Search by Title" })
+            </div>
+            <div class="col-md-1">
+                <input type="submit" value="Search" class="btn btn-block btn-info" />
+            </div>
+        </div>
+        <div class="row md-Padding-Top-100">
+            <ul style="list-style:none; display:inline-block; overflow-y:scroll;" id="lstTVShows"></ul>
+            
+        </div>
+    </div>
+    <div class="row md-Padding-Top-170">
+        <div class="col-md-12">
+        </div>
+    </div>
+    <div class="row md-Padding-Top-100">
+        <div class="col-md-12">
+        </div>
+    </div>
+    <div class="row md-Padding-Top-170">
+        <div class="col-md-12">
+            <h1 class="control-label md-Padding-Top-5 align-center">This is a free API, so there wasn't much I could do with it</h1>
+        </div>
+    </div>
+</form>
+
+<script>
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '1e8b993acdmsh534d473626853b5p1196b1jsn69a4f4ae5e89',
+            'X-RapidAPI-Host': 'mdblist.p.rapidapi.com'
+        }
+    };
+
+    var json = fetch('https://mdblist.p.rapidapi.com/?s=game&m=show', options)
+        .then(response => response.json())
+        .then(data => {
+            const list = data.search;
+            list.map((item) => {
+                const name = item.title;
+                document.getElementById("lstTVShows").innerHTML += name + ' , ';
+            })
+        })
+        .catch(err => console.error(err));
+
+        console.log(json);
+</script>

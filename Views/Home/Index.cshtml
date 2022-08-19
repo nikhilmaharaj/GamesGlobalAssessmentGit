@@ -24,6 +24,19 @@
         </div>
     </div>
     <div class="row md-Padding-Top-100">
+        <div id="divIMDB" title="Go to IMDB List" onclick="Navigate(id)" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="info-box bg-orange hover-expand-effect mousePointer">
+                <div class="icon">
+                    <i class="material-icons">dvr</i>
+                </div>
+                <div class="content">
+                    <div class="text">IMDB List</div>
+                    <div class="number count-to" data-from="0" data-speed="1000" data-fresh-interval="20"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row md-Padding-Top-100">
         <div id="divAboutUs" title="Go to About Us" onclick="Navigate(id)" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="info-box bg-brown hover-expand-effect mousePointer">
                 <div class="icon">
@@ -35,9 +48,7 @@
             </div>
         </div>
     </div>
-    <div class="row md-Padding-Top-170">
-    </div>
-    <div class="row md-Padding-Top-170">
+    <div class="row md-Padding-Top-50">
     </div>
     <div class="row md-Padding-Top-10">
     </div>
@@ -50,6 +61,9 @@
         switch (Id) {
             case 'divTVShow':
                 window.location.href = '/TVShowList/Index';
+                break;
+            case 'divIMDB':
+                window.location.href = '/IMDB/Index';
                 break;
             case 'divAboutUs':
                 window.location.href = '/Home/AboutUs';

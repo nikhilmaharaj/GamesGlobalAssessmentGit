@@ -447,3 +447,4 @@ C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\GamesGlobalAsses
 C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\GamesGlobalAssessment.dll
 C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\GamesGlobalAssessment.pdb
 C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\GamesGlobalAssessment.genruntimeconfig.cache
+C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\Razor\Views\IMDB\Index.cshtml.g.cs
