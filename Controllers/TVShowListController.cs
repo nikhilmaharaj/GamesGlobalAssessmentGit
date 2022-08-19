@@ -28,7 +28,12 @@ namespace GamesGlobalAssessment.Controllers
         // GET: TVShowList
         public async Task<IActionResult> Index(string search)
         {
-            var results = await _context.ViewTVShows.ToListAsync();
+            string username = _httpContextAccessor.HttpContext.Session.GetString("Username"); //Gets the username from the session
+            var userID = from x in _context.Users.ToList() //Gets the userID by the username
+                         where x.Username == username
+                         select x.UserID;
+
+            var results = await _context.ViewTVShows.Where(x => x.UserID == userID.First()).ToListAsync();
 
             #region SearchFilters 
             if (!string.IsNullOrEmpty(search))
