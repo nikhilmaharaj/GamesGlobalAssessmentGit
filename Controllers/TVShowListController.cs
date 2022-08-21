@@ -40,6 +40,14 @@ namespace GamesGlobalAssessment.Controllers
                 results = results.Where(x => x.Title == search || x.CreatedBy == search || x.Year.ToString() == search).ToList();
             #endregion
 
+            #region GetNextEpisodes
+            var getNextEpisodes = _context.ViewEpisodes.Where(x => x.UserID == userID.First()).ToList();
+            if (getNextEpisodes.Count > 0)
+                ViewData["Episode"] = getNextEpisodes;
+            else
+                ViewData["Episode"] = null;
+            #endregion
+
             return View(results);
         }
 
@@ -173,9 +181,14 @@ namespace GamesGlobalAssessment.Controllers
         }
 
         public JsonResult GetTVShows(string search)
-        {          
+        {
+            string username = _httpContextAccessor.HttpContext.Session.GetString("Username"); //Gets the username from the session
+            var userID = from x in _context.Users.ToList() //Gets the userID by the username
+                         where x.Username == username
+                         select x.UserID;
+
             var Data = (from x in  _context.ViewTVShows.Take(10)
-                             where x.Title.StartsWith(search)
+                             where x.UserID == userID.First() && x.Title.StartsWith(search)
                              select new
                              {
                                  label = x.Title,

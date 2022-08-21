@@ -428,8 +428,13 @@ C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\Razor\Areas\Iden
 C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\Razor\Views\Episode\Create.cshtml.g.cs
+C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\Razor\Views\Episode\Delete.cshtml.g.cs
+C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\Razor\Views\Episode\Edit.cshtml.g.cs
+C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\Razor\Views\Episode\Index.cshtml.g.cs
 C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\Razor\Views\Home\AboutUs.cshtml.g.cs
 C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\Razor\Views\IMDB\Index.cshtml.g.cs
 C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -447,4 +452,3 @@ C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\GamesGlobalAsses
 C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\GamesGlobalAssessment.dll
 C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\GamesGlobalAssessment.pdb
 C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\GamesGlobalAssessment.genruntimeconfig.cache
-C:\Users\user-pc\Desktop\GamesGlobalGit\obj\Debug\netcoreapp3.1\Razor\Views\IMDB\Index.cshtml.g.cs

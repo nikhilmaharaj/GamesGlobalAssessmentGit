@@ -2,6 +2,8 @@
 
 @{
     ViewData["Title"] = "Index";
+
+    IEnumerable<GamesGlobalAssessment.Models.ViewEpisodes> episodes = ViewData["Episode"] as IEnumerable<GamesGlobalAssessment.Models.ViewEpisodes>;
 }
 
 <form style="background: url('@Url.Content("~/css/images/tv3.jpg")');">
@@ -75,4 +77,62 @@
             }
         </tbody>
     </table>
+</form>
+<form>
+    <div>
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#Episode" aria-controls="Episode" role="tab" data-toggle="tab">Next Episodes To Watch</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="Episode">
+            @if (episodes != null)
+            {
+                <table class="table table-bordered table-striped table-responsive">
+                    <thead>
+                        <tr class="modal-col-grey">
+                            <th>Episode No</th>
+                            <th>Episode Name</th>
+                            <th>Season</th>
+                            <th>Title</th>
+                            <th>Created By</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @try
+                        {
+                            @foreach (GamesGlobalAssessment.Models.ViewEpisodes viewEpisodes in episodes)
+                            {
+                                <tr>
+                                    <td>@viewEpisodes.EpisodeNo</td>
+                                    <td>@viewEpisodes.EpisodeName</td>
+                                    <td>@viewEpisodes.Season</td>
+                                    <td>@viewEpisodes.Title</td>
+                                    <td>@viewEpisodes.CreatedBy</td>
+                                    <td>@viewEpisodes.Year</td>
+                                </tr>
+                            }
+                        }
+                        catch
+                        {
+                            <tr>No Data Found</tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <div class="white well">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>No Data Found.</label>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
 </form>
