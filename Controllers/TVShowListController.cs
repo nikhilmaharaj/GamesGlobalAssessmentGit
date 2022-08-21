@@ -41,7 +41,7 @@ namespace GamesGlobalAssessment.Controllers
             #endregion
 
             #region GetNextEpisodes
-            var getNextEpisodes = _context.ViewEpisodes.Where(x => x.UserID == userID.First()).ToList();
+            var getNextEpisodes = _context.ViewEpisodes.Where(x => x.UserID == userID.First() && x.Watched == false).ToList(); 
             if (getNextEpisodes.Count > 0)
                 ViewData["Episode"] = getNextEpisodes;
             else

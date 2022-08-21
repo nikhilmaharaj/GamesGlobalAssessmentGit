@@ -4,7 +4,8 @@
     ViewData["Title"] = "Delete";
 }
 
-<div class="well white">
+<html>
+    <body>
     <form asp-action="Delete" style="background: url('@Url.Content("~/css/images/tv.jpg")');">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="row md-Padding-Top-100 align-center">
@@ -64,4 +65,9 @@
             </div>
         </div>
     </form>
-</div>
+</body>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/16.13.0/umd/react.development.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.0/umd/react-dom.development.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
+<script src="@Url.Content("~/Scripts/React.jsx")"></script>
+</html>

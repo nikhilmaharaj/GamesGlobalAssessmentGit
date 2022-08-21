@@ -14,20 +14,27 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "C:\Users\user-pc\Desktop\GamesGlobalGit\Views\_ViewImports.cshtml"
-using GamesGlobalAssessment;
+using React.AspNet;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\user-pc\Desktop\GamesGlobalGit\Views\_ViewImports.cshtml"
+using GamesGlobalAssessment;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\user-pc\Desktop\GamesGlobalGit\Views\_ViewImports.cshtml"
 using GamesGlobalAssessment.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d62bbef6a08370fd8fba9a43d9489f4acbba1004", @"/Views/Episode/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b654c759d1b9414e553539eb347a3797ad49ca7c", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"312d8bacca5e4d367179164d80dbad26a7d42678", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Episode_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<GamesGlobalAssessment.Models.ViewEpisodes>>
     #nullable disable
@@ -75,7 +82,7 @@ using GamesGlobalAssessment.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d62bbef6a08370fd8fba9a43d9489f4acbba10045952", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d62bbef6a08370fd8fba9a43d9489f4acbba10046119", async() => {
                 WriteLiteral(@"
     <div class=""row md-Padding-Top-100 align-center"">
         <div class=""col-lg-12 col-md-12 col-sm-12 col-xs-12"">
@@ -109,7 +116,7 @@ using GamesGlobalAssessment.Models;
                 </div>
                 <div class=""col-md-1 col-xs-2 align-right"">
                     ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d62bbef6a08370fd8fba9a43d9489f4acbba10047533", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d62bbef6a08370fd8fba9a43d9489f4acbba10047700", async() => {
                     WriteLiteral("\r\n                        <i class=\"fa fa-2x fa-plus\"></i>\r\n                    ");
                 }
                 );
@@ -200,7 +207,7 @@ using GamesGlobalAssessment.Models;
 #line hidden
 #nullable disable
                 WriteLiteral("                <tr>\r\n                    <td>\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d62bbef6a08370fd8fba9a43d9489f4acbba100411977", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d62bbef6a08370fd8fba9a43d9489f4acbba100412144", async() => {
                     WriteLiteral("\r\n                            <i class=\"fa fa-2x fa-edit\"></i>\r\n                        ");
                 }
                 );
@@ -289,7 +296,7 @@ using GamesGlobalAssessment.Models;
 #line hidden
 #nullable disable
                 WriteLiteral("\r\n                    </td>\r\n                    <td>\r\n                        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d62bbef6a08370fd8fba9a43d9489f4acbba100416943", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d62bbef6a08370fd8fba9a43d9489f4acbba100417110", async() => {
                     WriteLiteral("\r\n                            <i class=\"fa fa-2x fa-trash\"></i>\r\n                        ");
                 }
                 );

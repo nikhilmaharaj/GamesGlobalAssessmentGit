@@ -18,10 +18,14 @@
     <Content Remove="Areas\Identity\Pages\Account\Login.cshtml" />
     <Content Remove="Areas\Identity\Pages\Account\Logout.cshtml" />
     <Content Remove="Areas\Identity\Pages\Account\Register.cshtml" />
+    <Content Remove="wwwroot\Scripts\React.jsx" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="JavaScriptEngineSwitcher.Extensions.MsDependencyInjection" Version="3.19.0" />
+    <PackageReference Include="JavaScriptEngineSwitcher.V8" Version="3.19.0" />
+    <PackageReference Include="JavaScriptEngineSwitcher.V8.Native.win-x64" Version="3.18.4" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.14" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.15" />
@@ -36,6 +40,11 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.15" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.15" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="React.AspNet" Version="5.2.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\Scripts\React.jsx" />
   </ItemGroup>
 
 </Project>
