@@ -165,5 +165,15 @@ namespace GamesGlobalAssessment.Controllers
         {
             return _context.Episode.Any(e => e.EpisodeID == id);
         }
+
+        [HttpPost, ActionName("MarkEpisodeWatched")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> MarkEpisodeWatched(int episodeid)
+        {
+            var episode = await _context.Episode.FirstOrDefaultAsync(x => x.EpisodeID == episodeid);
+            episode.Watched = true;
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

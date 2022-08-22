@@ -21,7 +21,7 @@
             <div class="col-md-1">
                 <label class="control-label md-Padding-Top-5"><b>Episode No</b></label>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <input asp-for="EpisodeNo" class="form-control" required="required" onkeypress="return isNumber(event)" />
                 <span asp-validation-for="EpisodeNo" class="text-danger"></span>
             </div>
@@ -32,7 +32,7 @@
             <div class="col-md-1">
                 <label class="control-label md-Padding-Top-5"><b>Episode Name</b></label>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <input asp-for="EpisodeName" class="form-control" required="required" />
                 <span asp-validation-for="EpisodeName" class="text-danger"></span>
             </div>
@@ -43,7 +43,7 @@
             <div class="col-md-1">
                 <label class="control-label md-Padding-Top-5"><b>Season</b></label>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <input asp-for="Season" class="form-control" required="required" onkeypress="return isNumber(event)" />
                 <span asp-validation-for="Season" class="text-danger"></span>
             </div>
@@ -54,7 +54,7 @@
             <div class="col-md-1">
                 <label class="control-label md-Padding-Top-5"><b>TV Show</b></label>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <input id="TVShow" type="text" class="form-control" placeholder="Search for a TV Show" />
                 <input Id="TVShowID" name="TVShowID" class="hidden" asp-for="TVShowID" />
                 <span asp-validation-for="TVShowID" class="text-danger"></span>
@@ -65,6 +65,9 @@
             </div>
             <div class="col-md-2">
                 <input type="submit" id="btnSave" value="Save" class="btn btn-block btn-info" />
+            </div>
+            <div class="col-md-2">
+                <input type="submit" id="btnWatched" onclick="javascript: form.action='/Episode/MarkEpisodeWatched';" value="Mark Episode Watched" class="btn btn-block btn-info" />
             </div>
         </div>
         <div class="row md-Padding-Top-170">
