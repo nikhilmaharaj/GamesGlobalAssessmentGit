@@ -9,21 +9,21 @@
 const header1 =
     (<h1 style={s}>TV Show List</h1>)
 
-const header2 =
-    (<h1 style={s}>Edit TV Show</h1>)
+//const header2 =
+//    (<h1 style={s}>Edit TV Show</h1>)
 
-const header3 =
-    (<h1 style={s}>Remove TV Show</h1>)
+//const header3 =
+//    (<h1 style={s}>Remove TV Show</h1>)
 
 ReactDOM.render(
-    header1, document.getElementById('header1')
-),
-ReactDOM.render(
-    header2, document.getElementById('header2')
-),
-ReactDOM.render(
-    header3, document.getElementById('header3')
-);
+    header1, document.querySelector('#header1')
+)
+//ReactDOM.render(
+//    header2, document.querySelector('#header2')
+//),
+//ReactDOM.render(
+//    header3, document.querySelector('#header3')
+//);
 
 //class Header1 extends React.Component {
 //    render() {
