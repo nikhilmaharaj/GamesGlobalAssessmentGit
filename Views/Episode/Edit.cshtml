@@ -55,7 +55,7 @@
                 <label class="control-label md-Padding-Top-5"><b>TV Show</b></label>
             </div>
             <div class="col-md-3">
-                <input id="TVShow" type="text" class="form-control" placeholder="Search for a TV Show" />
+                <input id="TVShow" type="text" value="@ViewBag.TVShow" class="form-control" placeholder="Search for a TV Show" />
                 <input Id="TVShowID" name="TVShowID" class="hidden" asp-for="TVShowID" />
                 <span asp-validation-for="TVShowID" class="text-danger"></span>
             </div>

@@ -85,14 +85,14 @@ namespace GamesGlobalAssessment.Controllers
                 return NotFound();
             }
 
-            var getEpisode = from x in _context.ViewEpisodes
+            var getTVShow = from x in _context.ViewEpisodes
                             where x.EpisodeID == id
-                            select x.EpisodeName;
+                            select x.Title;
 
-            if (getEpisode != null && getEpisode.ToList().Count > 0)
-                ViewBag.EpisodeName = getEpisode.FirstOrDefault().ToString();
+            if (getTVShow != null && getTVShow.ToList().Count > 0)
+                ViewBag.TVShow = getTVShow.FirstOrDefault().ToString();
             else
-                ViewBag.EpisodeName = null;
+                ViewBag.TVShow = null;
 
             return View(episode);
         }
