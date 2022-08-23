@@ -10,6 +10,7 @@ using GamesGlobalAssessment.Data;
 using GamesGlobalAssessment.Models;
 using Microsoft.AspNetCore.Http;
 using System.Web;
+using System.Xml;
 
 namespace GamesGlobalAssessment.Controllers
 {
@@ -118,6 +119,11 @@ namespace GamesGlobalAssessment.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("TVShowID,Title,Year,CreatedBy,UserID")] TVShow tvshow)
         {
+            string username = _httpContextAccessor.HttpContext.Session.GetString("Username"); //Gets the username from the session
+            var userID = from x in _context.Users.ToList() //Gets the userID by the username
+                         where x.Username == username
+                         select x.UserID;
+
             if (id != tvshow.TVShowID)
             {
                 return NotFound();
@@ -127,6 +133,7 @@ namespace GamesGlobalAssessment.Controllers
             {
                 try
                 {
+                    tvshow.UserID = Convert.ToInt32(userID.First());
                     _context.Update(tvshow);
                     await _context.SaveChangesAsync();
                 }
@@ -170,6 +177,16 @@ namespace GamesGlobalAssessment.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var tvShow = await _context.TVShow.FindAsync(id);
+
+            var items = from y in _context.Episode.ToList() //Gets the Episode List of the TV Show
+                         where y.TVShowID == id
+                         select y;
+
+            foreach (var item in items) //Deletes all Episodes linked to the TV Show
+            {
+                _context.Episode.Remove(item);
+            }
+
             _context.TVShow.Remove(tvShow);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

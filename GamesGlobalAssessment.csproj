@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>aspnet-PetCareManagementSystem-D6481BFE-FF4C-42BE-9BE1-E4F2F372DACF</UserSecretsId>
+    <UserSecretsId>aspnet-GamesGlobalAssessment-D6481BFE-FF4C-42BE-9BE1-E4F2F372DACF</UserSecretsId>
     <OutputType>Exe</OutputType>
     <AssemblyName>GamesGlobalAssessment</AssemblyName>
     <RootNamespace>GamesGlobalAssessment</RootNamespace>

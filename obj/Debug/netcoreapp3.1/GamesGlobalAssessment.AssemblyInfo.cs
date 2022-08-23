@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-PetCareManagementSystem-D6481BFE-FF4C-42BE-9BE1-E4F2F372DACF")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-GamesGlobalAssessment-D6481BFE-FF4C-42BE-9BE1-E4F2F372DACF")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("GamesGlobalAssessment")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
